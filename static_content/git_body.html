@@ -1,0 +1,69 @@
+<!-- START OF BODY -->
+   <div class="container-fluid">
+    <div class="row" style="margin-top:20px;">
+     <div class="col-xs-1">
+     </div>
+     <div class="col-xs-10">
+      <h3>Useful Git Code</h3>
+      <p>The following code assumes you have access to a server with git installed on it. Or just create a github account and use that.</p><br>
+      
+      <h4>Setup Git</h4>
+      <div class="well">
+        <p><code>git config --global user.name "James McGarr"</code> Set name to be associated with your commits.</p>
+        <p><code>git config --global user.email jamesmcgarr@example.com</code> Set your email.</p>
+        <p><code>git config --global color.ui true</code> Add colours to your command line.</p>
+      </div>         
+      <h4>Working With A Local Repository</h4>
+      <div class="well">
+        <p><code>git init</code> Initialize a local git repository. </p>  
+        <p><code>git commit -m "comment goes here"</code> Committing changes to repository. </p>
+      </div>         
+      <h4>Working With A Remote Repository</h4>
+      <div class="well">
+        <p><code>git remote add origin https://github.com/your-name/remote-repo.git</code> Link to a remote repository. </p>
+        <p><code>git push -u origin master</code> push local <i>repo</i> to remote <i>repo</i>.<br>The <code>-u</code> modifier saves <code>origin master</code> so next time just type <code>git push</code> </p>
+        <p><code>git pull origin master</code> Pull down any new changes to remote <i>repo</i></p>
+        <p><code>git clone &lang;URL&rang;</code> Get a copy of an existing Git repository.</p>
+      </div>            
+      <h4>Working With The Staging Area <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="The place where things will eventually be saved(committed) with git."></span></h4>  
+      <div class="well">
+        <p><code>git add &lang;file&rang;</code> Add file to staging area. </p> 
+        <p><code>git add --all</code> Add all new, modified or deleted files to staging area. </p>  
+        <p><code>git add '*.txt'</code> Use wildcard to add all changes to staging area. </p>  
+        <p><code>git reset &lang;file&rang;</code> Unstage file.</p>     
+      </div>                 
+      <h4>View Status, Log And Other Information</h4>  
+      <div class="well">
+        <p><code>git status</code> Check status of git repository. </p>
+        <p><code>git log</code> Check the history of changes. </p>  
+        <p><code>git diff HEAD</code> Look at what is different from the last commit<br>The <code>HEAD</code> part is used to refer to the most recent commit.</p>
+        <p><code>git diff --staged</code> See changes that were just made using git add.<br><code>--staged</code> refers to what has been added but not committed.</p>
+      </div>             
+      <h4>Working With Branches <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="A branch is a copy of the repository you are working on locally. After a branch is created it will exist until it is deleted."></span></h4>  
+      <div class="well">
+        <p><code>git branch new_branch</code> Create a separate copy of your repository (aka. Branch) called "new_branch" or whatever you want to name it.</p>
+        <p><code>git branch</code> See a list of local branches.</p>
+        <p><code>git checkout new_branch</code> Switch to the "new_branch" branch.</p>  
+        <p><code>git merge new_branch</code> Assuming you have switched back to the master branch, use this command to merge the "new_branch" to the "master" branch.</p>
+        <p><code>git branch -d new_branch</code> Delete the "new_branch" branch.</p>
+      </div>                  
+      <h4>Deleting And Undo</h4>  
+      <div class="well">
+        <p><code>git checkout -- &lang;file&rang;</code> Get rid of all the changes since the last commit for <code>&lang;file&rang;</code></p>
+        <p><code>git rm '*.txt'</code> Remove .txt files from repository and stage the removal so when you run the command <code>git commit</code> it will complete the removal from the repository.</p>
+      </div>            
+      
+      
+                                                                                           
+      
+     </div>
+     <div class="col-xs-1">
+     </div>
+    </div>
+    
+    
+    
+    
+    
+   </div>
+<!-- END OF BODY -->            

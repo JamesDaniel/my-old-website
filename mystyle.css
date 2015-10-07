@@ -1,0 +1,89 @@
+/* CSS Document */
+
+    body {
+      position: relative; 
+      background-color:#faebd7;
+    }
+    .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+    }
+    .navbar {
+      margin-bottom: 0px;
+    }
+    .affix ~ .container {
+      position: relative;
+      top:56px;
+    }
+    .jumbotron {
+      background-color:#16527A !important;
+      color:#F2F2F2;
+    }
+    .navbar-inverse {
+      background-color:#23496D;
+      border-radius:0px;
+    }
+    nav > div > .navbar-header > a {
+      color:#F2F2F2 !important;
+    }
+    #frm
+    {
+    width:100%;
+    height:100%;
+    }
+    
+    
+    .bubble        /* REFERENCE http://www.ilikepixels.co.uk/drop/bubbler/ */
+{
+position: relative;
+width: 80%;
+height: auto;
+padding: 5px;
+background: #23496D;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 15px 0;
+border-color: transparent #23496D;
+display: block;
+width: 0;
+z-index: 1;
+left: -15px;
+top: 30px;
+}
+
+    .bubble2        /* REFERENCE http://www.ilikepixels.co.uk/drop/bubbler/ */
+{
+position: relative;
+width: 100%;
+height: auto;
+padding: 5px;
+margin: 50px;
+background: #23496D;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble2:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 15px;
+border-color: #23496D transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -15px;
+left: 110px;
+}
+    
