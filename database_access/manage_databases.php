@@ -7,8 +7,9 @@
     
     
     if ($database == 'books') {
-        if ($open_close == 'open') {  
-            require("../passwords/database_credentials.php");        
+        if ($open_close == 'open') {               
+            //require("passwords/database_credentials.php"); // for remote site
+            require("../passwords/database_credentials.php");   // for local testing  
             $book_conn = new mysqli($server, $username, $password, $database_name);
             $_GLOBALS['db_connection'] = $book_conn;
           

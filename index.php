@@ -15,10 +15,10 @@
   
    
       
-   <?php require("log_visit.php"); ?>
+   <?php require("database_access/log_visit.php"); ?>
    <script>
        var xhttp = new XMLHttpRequest();
-       xhttp.open("GET", "update_statistics.php?VisitID=<?php echo $VisitID; ?>", true);
+       xhttp.open("GET", "database_access/update_statistics.php?VisitID=<?php echo $VisitID; ?>", true);
        xhttp.send();
    </script>
    <?php require("static_content/header.html"); ?>
