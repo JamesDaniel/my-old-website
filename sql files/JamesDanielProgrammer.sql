@@ -2,6 +2,7 @@
 DROP TABLE ReadingList;
 DROP TABLE WebLearningList;
 DROP TABLE WebTutorials;
+DROP TABLE ReadingSessions;
 DROP TABLE Members;
 DROP TABLE Books;
 DROP TABLE VisitorLog;
@@ -38,6 +39,18 @@ dateOfReading TIMESTAMP,
 dateLastRead TIMESTAMP,    
 percentageComplete INT(3),
 PRIMARY KEY (PersonID, BookID),
+FOREIGN KEY (PersonID) REFERENCES Members(PersonID),
+FOREIGN KEY (BookID) REFERENCES Books(BookID)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE ReadingSessions (
+SessionID INT(6),
+PersonID INT(6),
+BookID INT(6),
+SessionDate TIMESTAMP,
+PRIMARY KEY (SessionID),
 FOREIGN KEY (PersonID) REFERENCES Members(PersonID),
 FOREIGN KEY (BookID) REFERENCES Books(BookID)
 )

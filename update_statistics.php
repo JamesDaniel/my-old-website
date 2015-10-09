@@ -7,7 +7,7 @@
         $connection = $_GLOBALS['db_connection'];
         echo '<script>alert("hello script"); </script>';       
                                 
-        $VisitID = $_GET["VisitID"];                 
+        $VisitID = $_REQUEST["VisitID"];                 
                          
         $sql = "UPDATE VisitorLog 
                 SET HasJavaScript ='Y'

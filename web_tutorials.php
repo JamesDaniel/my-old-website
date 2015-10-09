@@ -23,7 +23,7 @@
    </script>
    <?php require("static_content/header.html"); ?>
    <?php require("static_content/nav.html"); ?>
-   <?php require("static_content/web_tutorials_body.php"); ?>
+   <?php require("dynamic_content/web_tutorials_body.php"); ?>
    
     
    
