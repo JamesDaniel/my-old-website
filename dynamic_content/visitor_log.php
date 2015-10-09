@@ -1,7 +1,7 @@
 <?php    
     $_GLOBALS['database'] = 'books';
     $_GLOBALS['open_close'] = 'open';
-    require("manage_databases.php");
+    require("database_access/manage_databases.php");
     $connection = $_GLOBALS['db_connection'];
     
     
@@ -25,7 +25,7 @@
        
     $_GLOBALS['database'] = 'books';
     $_GLOBALS['open_close'] = 'close';
-    require("manage_databases.php");
+    require("database_access/manage_databases.php");
     
     
 ?> 
