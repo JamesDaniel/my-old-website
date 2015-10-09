@@ -12,10 +12,42 @@
     
   </head>
   <body>
-   
-   <?php require("dynamic_content/visitor_log.php"); ?>
-   
+            <?php
+        //require("passwords/database_credentials.php"); // for remote site
+        require("../passwords/database_credentials.php");   // for local testing  
+            $connection = new mysqli($server, $username, $password, $database_name);
+        if ($connection->connect_error) {
+                die("Connection failed: " . $connection->connect_error);
+            }    
     
+    
+    
+    echo "Database Connected successfully<br>";
+    
+    echo "Today is " . date("Y-m-d") . "<br>";
+                        
+    $sql = "SELECT VisitID, VisitDate, VisitPage, HasJavaScript FROM VisitorLog";
+    $result = $connection->query($sql);
+    
+    if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "VisitID: " . $row["VisitID"]. " - VisitDate: " . $row["VisitDate"]. " - VisitPage: " . $row["VisitPage"]. " - Has JavaScript: " . $row["HasJavaScript"] . "<br>";
+    }
+    } else {
+        echo "0 results";
+    }
+
+
+
+
+
+
+
+
+
+       $connection->close(); 
+                       ?>
    
   </body>
 </html>
