@@ -49,7 +49,8 @@
       </div>                  
       <h4>Deleting And Undo</h4>  
       <div class="well">
-        <p><code>git checkout -- &lang;file&rang;</code> Get rid of all the changes since the last commit for <code>&lang;file&rang;</code></p>
+        <p><code>git reset &lang;file&rang;</code> Unstage file from staging area.</p>
+        <p><code>git rm HEAD~1</code> Undo commit.</p>
         <p><code>git rm '*.txt'</code> Remove .txt files from repository and stage the removal so when you run the command <code>git commit</code> it will complete the removal from the repository.</p>
       </div>            
       
